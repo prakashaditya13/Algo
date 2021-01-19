@@ -1,5 +1,7 @@
 /*
 ! Algo Javascript Library 1.0
+! Creator :- Aditya Prakash
+! Date :- 
 */
 
 //Implementation Success Message

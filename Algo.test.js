@@ -8,6 +8,8 @@ test('Linear Search Testing', () => {
     expect(Algo.LinearSearch([1,2,3,45,32,56],100).index).toBe(-1)
     // checking element Boolean
     expect(Algo.LinearSearch([1,2,3,45,32,56],32).isBool).toBe(true)
+    expect(Algo.LinearSearch([1,2,3,45,32,56],60).isBool).toBe(false)
     // checking return element
     expect(Algo.LinearSearch([1,2,3,45,32,56],32).value).toBe(32)
+    expect(Algo.LinearSearch([1,2,3,45,32,56],50).value).toBe("Not Found")
 })
