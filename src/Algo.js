@@ -48,7 +48,6 @@ const Algo = {
         return this
       },
     BinarySearch: function(elem,find){
-        this.typeMismatch(elem,find)
         let FirstEnd = 0, LastEnd = elem.length - 1, middle
         this.isBool = false
         this.index = -1
@@ -68,36 +67,39 @@ const Algo = {
         }
         return this
     },
-    JumpSearch: function(elem,find){
-        var len = elem.length
-        var step = Math.floor(Math.sqrt(len))
-        var prev = 0
-        while(elem[Math.min(step,len)-1]<find){
-            prev=step
-            step+=Math.floor(Math.sqrt(len))
-            if(prev>=len){
-                this.index = -1
-                break
-            }
-        }
-        while(elem[prev]<find){
-            prev++
-            if(prev===Math.min(step,len)){
-                this.index = -1
-                break
-            }
-        }
-        if(elem[prev]===find){
-            this.index = prev
-            this.isBool = true
-            this.value = find
-        }else{
+    JumpSearch: function(arrayToSearch, valueToSearch){
+        var length = arrayToSearch.length;
+        var step = Math.floor(Math.sqrt(length));
+        var index = Math.min(step, length)-1;
+        var lowerBound = 0;
+        this.isBool = false
+        this.value = "Not Found"
+        while (arrayToSearch[Math.min(step, length)-1] < valueToSearch)
+        {
+          lowerBound = step;
+          step += step;
+          if (lowerBound >= length){
             this.index = -1
-            this.isBool = false
-            this.value = 'Not Found'
+            return this
+          }
         }
-        return this
-    },
+         
+        var upperBound = Math.min(step, length);
+        while (arrayToSearch[lowerBound] < valueToSearch)
+        {
+          lowerBound++;
+          if (lowerBound === upperBound){
+                this.index = -1
+                return this
+          }
+        }
+        if (arrayToSearch[lowerBound] === valueToSearch){
+           this.index = lowerBound
+           this.isBool = true
+           this.value = valueToSearch
+        }
+        return this;
+      },
     ExponentialSearch: function(elem,find){
         function binarySearch(arrayToSearch, valueToSearch, start, end){
             if(start <= end){
