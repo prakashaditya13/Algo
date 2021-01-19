@@ -1,0 +1,26 @@
+{
+  "name": "Algo",
+  "version": "1.0.0",
+  "description": "Algorithm Library for JavaScript and NodeJS",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prakashaditya13/Algo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prakashaditya13/Algo/issues"
+  },
+  "homepage": "https://github.com/prakashaditya13/Algo#readme",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}

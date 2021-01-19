@@ -134,3 +134,6 @@ const Algo = {
     },
     
 }
+
+
+module.exports = Algo
