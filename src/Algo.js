@@ -1,7 +1,10 @@
 /*
 ! Algo Javascript Library 1.0
 ! Creator :- Aditya Prakash
-! Date :- 
+! Date :- 17 Jan, 2021
+! License :- MIT license
+! Documentation :- 
+! NPM Package :- 
 */
 
 //Implementation Success Message
@@ -9,30 +12,30 @@
     console.log("Algo.js initialization successfully!")
 })()
 
-const Error = {
-    Searching: {
-        linear: function(Errorele, ErrorFind){
-            if(typeof(ErrorFind) === "undefined"){
-                console.warn(`Please provide the parameter in Algo.function(${find})`)
-            }
-            if(typeof(Errorele) === "string" || typeof(Errorele) === "number"){
-                console.error(`Passing of parameter in Algo.function() is not type of 'String' and 'Number'
-                    Please use Algo.function(!undefined)
-                `)
-            }
-        },
-        binary: function(){},
-        jump: function(){},
-        exponential: function(){}
-    }
-}
+// const Error = {
+//     Searching: {
+//         linear: function(Errorele, ErrorFind){
+//             if(typeof(ErrorFind) === "undefined"){
+//                 console.warn(`Please provide the parameter in Algo.function(${find})`)
+//             }
+//             if(typeof(Errorele) === "string" || typeof(Errorele) === "number"){
+//                 console.error(`Passing of parameter in Algo.function() is not type of 'String' and 'Number'
+//                     Please use Algo.function(!undefined)
+//                 `)
+//             }
+//         },
+//         binary: function(){},
+//         jump: function(){},
+//         exponential: function(){}
+//     }
+// }
 //Core Algo functionality with Objects
 const Algo = {
     index: null,
     value: null,
     isBool: null,
     LinearSearch: function(elem,find){
-        Error.Searching.linear(elem,find)
+        // Error.Searching.linear(elem,find)
         for(let i=0;i<elem.length;i++){
           if(elem[i]===find){
             this.isBool = true
@@ -136,8 +139,25 @@ const Algo = {
         }
         return this
     },
+    QuickSort: function(UnsortedArray){
+        if(UnsortedArray.length <=1){
+            return UnsortedArray
+        }else{
+            var leftUnsortedArray = []
+            var rightUnsortedArray = []
+            var newSortedArray = []
+            var pivotElement = UnsortedArray.pop()
+            var len = UnsortedArray.length
+            for(var i=0;i<len;i++){
+                if(UnsortedArray[i] <= pivotElement){
+                    leftUnsortedArray.push(UnsortedArray[i])
+                }else{
+                    rightUnsortedArray.push(UnsortedArray[i])
+                }
+            }
+            return newSortedArray.concat(this.QuickSort(leftUnsortedArray), pivotElement, this.QuickSort(rightUnsortedArray))
+        }
+    }
     
 }
-
-
 module.exports = Algo
