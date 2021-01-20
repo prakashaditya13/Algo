@@ -86,3 +86,35 @@ test('Insert Sort Testing', () => {
     expect(Algo.InsertionSort(['a','c','b'])).toEqual(['a','b','c'])
     expect(Algo.InsertionSort(['prakash','aditya','aaditya','rahul'])).toEqual(['aaditya','aditya','prakash','rahul'])  //checking for the strings
 })
+
+// Selection Sorting Testing
+
+test('Selection Sort Testing', () => {
+    expect(Algo.SelectionSort([5, 2, 4, 6, 1, 3])).toEqual([1, 2, 3, 4, 5, 6])
+    expect(Algo.SelectionSort(['a','c','b'])).toEqual(['a','b','c'])
+    expect(Algo.SelectionSort(['prakash','aditya','aaditya','rahul'])).toEqual(['aaditya','aditya','prakash','rahul'])  //checking for the strings
+})
+
+// Heap Sorting Testing
+
+test('Heap Sort Testing', () => {
+    expect(Algo.HeapSort([3, 0, 2, 5, -1, 4, 1])).toEqual([-1,0,1,2,3,4,5])
+    expect(Algo.HeapSort(['a','c','b'])).toEqual(['a','b','c'])
+    expect(Algo.HeapSort(['prakash','aditya','aaditya','rahul'])).toEqual(['aaditya','aditya','prakash','rahul'])  //checking for the strings
+})
+
+// Radix Sort Testing
+// Currently not supported for string values
+test('Radix Sort Testing', () => {
+    expect(Algo.RadixSort([5,3,88,235,65,23,4632,234])).toEqual([ 3, 5, 23, 65, 88, 234, 235, 4632 ])
+    // expect(Algo.RadixSort(['a','c','b'])).toEqual(['a','b','c'])
+    // expect(Algo.RadixSort(['prakash','aditya','aaditya','rahul'])).toEqual(['aaditya','aditya','prakash','rahul'])  //checking for the strings
+})
+
+//Bucket Sort
+test('Bucket Sorting Testing', () => {
+    expect(Algo.BucketSort([5,4,3,2,6,-1,7,10,9,8],1)).toEqual([
+        -1,2,3,4,5,6,7,8,9,10
+     ])
+     // not supported with string values currently
+})
