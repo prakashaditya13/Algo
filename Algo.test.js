@@ -62,3 +62,27 @@ test('Quick Sort Testing', () => {
     expect(Algo.QuickSort(['a','c','b'])).toEqual(['a','b','c'])  // checking for characters only
     expect(Algo.QuickSort(['prakash','aditya','aaditya','rahul'])).toEqual(['aaditya','aditya','prakash','rahul'])  //checking for the strings
 })
+
+// Bubble Sorting Testing
+
+test('Bubble Sort Testing', () => {
+    expect(Algo.BubbleSort([9, 0, 2, 7, -2, 6, 1])).toEqual([-2,0,1,2,6,7,9])
+    expect(Algo.BubbleSort(['a','c','b'])).toEqual(['a','b','c'])
+    expect(Algo.BubbleSort(['prakash','aditya','aaditya','rahul'])).toEqual(['aaditya','aditya','prakash','rahul'])  //checking for the strings
+})
+
+// Merge Sorting Testing
+
+test('Merge Sort Testing', () => {
+    expect(Algo.MergeSort([4,7,5,9,1,3,8,2])).toEqual([1,2,3,4,5,7,8,9])
+    expect(Algo.MergeSort(['a','c','b'])).toEqual(['a','b','c'])
+    expect(Algo.MergeSort(['prakash','aditya','aaditya','rahul'])).toEqual(['aaditya','aditya','prakash','rahul'])  //checking for the strings
+})
+
+// Insertion Sorting Testing
+
+test('Insert Sort Testing', () => {
+    expect(Algo.InsertionSort([0,-3,5,8,2,7,6])).toEqual([-3,0,2,5,6,7,8])
+    expect(Algo.InsertionSort(['a','c','b'])).toEqual(['a','b','c'])
+    expect(Algo.InsertionSort(['prakash','aditya','aaditya','rahul'])).toEqual(['aaditya','aditya','prakash','rahul'])  //checking for the strings
+})

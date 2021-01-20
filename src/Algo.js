@@ -11,7 +11,6 @@
 (function(){
     console.log("Algo.js initialization successfully!")
 })()
-
 // const Error = {
 //     Searching: {
 //         linear: function(Errorele, ErrorFind){
@@ -157,7 +156,61 @@ const Algo = {
             }
             return newSortedArray.concat(this.QuickSort(leftUnsortedArray), pivotElement, this.QuickSort(rightUnsortedArray))
         }
-    }
+    },
+    BubbleSort: function(UnsortedArray){
+      var len = UnsortedArray.length
+      for(let i=0;i<len;i++){
+          for(let j=0,stop=len-i;j<stop;j++){
+            if(UnsortedArray[j]>UnsortedArray[j+1]){
+              var temp = UnsortedArray[j]
+              UnsortedArray[j] = UnsortedArray[j+1]
+              UnsortedArray[j+1] = temp
+            }
+          }
+      }
+      return UnsortedArray
+    },
+    MergeSort: function(UnsortedArray){
+      function merge(left, right){
+        var result = []
+        var LeftIndex = 0
+        var RightIndex = 0
+        while(LeftIndex<left.length && RightIndex<right.length){
+          if(left[LeftIndex]<right[RightIndex]){
+            result.push(left[LeftIndex])
+            LeftIndex++
+          }else{
+            result.push(right[RightIndex])
+            RightIndex++
+          }
+        }
+        return result.concat(left.slice(LeftIndex)).concat(right.slice(RightIndex))
+      }  
+      
+      if(UnsortedArray.length === 1){
+          return UnsortedArray
+        }
+        const middle = Math.floor(UnsortedArray.length/2)
+        const left = UnsortedArray.slice(0,middle)
+        const right = UnsortedArray.slice(middle)
+        return merge(this.MergeSort(left), this.MergeSort(right))
+     },
+     InsertionSort: function(UnsortedArray){
+        for(var i=1;i<UnsortedArray.length;i++){
+          if(UnsortedArray[i]<UnsortedArray[0]){
+            UnsortedArray.unshift(UnsortedArray.splice(i,1)[0])
+          }else if(UnsortedArray[i]>UnsortedArray[i-1]){
+            continue
+          }else{
+            for(var j=1;j<i;j++){
+              if(UnsortedArray[i]>UnsortedArray[j-1] && UnsortedArray[i]<UnsortedArray[j]){
+                UnsortedArray.splice(j,0,UnsortedArray.splice(i,1)[0])
+              }
+            }
+          }
+        }
+        return UnsortedArray
+     }
     
 }
 module.exports = Algo
