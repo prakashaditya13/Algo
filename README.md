@@ -67,7 +67,7 @@ Algo.LinearSearch([1,2,3,45,32,56],32).value // => 32
 Algo.LinearSearch([1,2,3,45,32,56],50).value // => 'Not Found'
 ```
 
-`Same As For Searching Algorithms`
+`Same As For other Searching Algorithms`
 
 *Sorting* - 
 
