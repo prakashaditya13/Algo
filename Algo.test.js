@@ -59,6 +59,7 @@ test('Exponential Search Testing', () => {
 // Quick Sorting Testing
 test('Quick Sort Testing', () => {
     expect(Algo.QuickSort([9, 0, 2, 7, -2, 6, 1 ])).toEqual([-2,0,1,2,6,7,9])  // checking for numbers
+    expect(Algo.QuickSort([5])).toEqual([5])
     expect(Algo.QuickSort(['a','c','b'])).toEqual(['a','b','c'])  // checking for characters only
     expect(Algo.QuickSort(['prakash','aditya','aaditya','rahul'])).toEqual(['aaditya','aditya','prakash','rahul'])  //checking for the strings
 })

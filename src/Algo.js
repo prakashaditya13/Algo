@@ -6,28 +6,10 @@
 ! Documentation :- 
 ! NPM Package :- 
 */
-
 //Implementation Success Message
 (function () {
   console.log("Algo.js initialization successfully!");
-})();
-// const Error = {
-//     Searching: {
-//         linear: function(Errorele, ErrorFind){
-//             if(typeof(ErrorFind) === "undefined"){
-//                 console.warn(`Please provide the parameter in Algo.function(${find})`)
-//             }
-//             if(typeof(Errorele) === "string" || typeof(Errorele) === "number"){
-//                 console.error(`Passing of parameter in Algo.function() is not type of 'String' and 'Number'
-//                     Please use Algo.function(!undefined)
-//                 `)
-//             }
-//         },
-//         binary: function(){},
-//         jump: function(){},
-//         exponential: function(){}
-//     }
-// }
+})()
 //Core Algo functionality with Objects
 const Algo = {
   index: null,
@@ -50,9 +32,7 @@ const Algo = {
     return this;
   },
   BinarySearch: function (elem, find) {
-    let FirstEnd = 0,
-      LastEnd = elem.length - 1,
-      middle;
+    let FirstEnd = 0,LastEnd = elem.length - 1,middle;
     this.isBool = false;
     this.index = -1;
     this.value = "Not Found";
@@ -86,7 +66,6 @@ const Algo = {
         return this;
       }
     }
-
     var upperBound = Math.min(step, length);
     while (arrayToSearch[lowerBound] < valueToSearch) {
       lowerBound++;
@@ -188,11 +167,8 @@ const Algo = {
           RightIndex++;
         }
       }
-      return result
-        .concat(left.slice(LeftIndex))
-        .concat(right.slice(RightIndex));
+      return result.concat(left.slice(LeftIndex)).concat(right.slice(RightIndex));
     }
-
     if (UnsortedArray.length === 1) {
       return UnsortedArray;
     }
@@ -210,8 +186,7 @@ const Algo = {
       } else {
         for (var j = 1; j < i; j++) {
           if (
-            UnsortedArray[i] > UnsortedArray[j - 1] &&
-            UnsortedArray[i] < UnsortedArray[j]
+            UnsortedArray[i] > UnsortedArray[j - 1] && UnsortedArray[i] < UnsortedArray[j]
           ) {
             UnsortedArray.splice(j, 0, UnsortedArray.splice(i, 1)[0]);
           }
@@ -292,7 +267,6 @@ const Algo = {
     const buckets = createBuckets(arr, bucketSize);
     // sort the buckets using insertion sort and add all bucket elements to sorted result
     return sortBuckets(buckets);
-
     function createBuckets(arr, bucketSize) {
       // determine the bucket count
       let min = arr[0];
@@ -305,13 +279,11 @@ const Algo = {
         }
       }
       const bucketCount = Math.floor((max - min) / bucketSize) + 1;
-
       // initialize each bucket (a multidimensional array)
       const buckets = [];
       for (let i = 0; i < bucketCount; i++) {
         buckets[i] = [];
       }
-
       // distribute elements into buckets
       for (let i = 0; i < arr.length; i++) {
         const bucketIndex = Math.floor((arr[i] - min) / bucketSize);
