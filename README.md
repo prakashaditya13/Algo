@@ -32,7 +32,7 @@ https://cdn.jsdelivr.net/gh/prakashaditya13/Algo/src/Algo.js
 ```
 https://cdn.jsdelivr.net/gh/prakashaditya13/Algo/src/Algo.min.js
 ```
-*☝ Only For Testing Purpose until we release the stable version of the library*
+*☝ Only For Testing Purpose until we release the stable version of the library. Not to be used in production.*
 
 **Using NPM**
 
