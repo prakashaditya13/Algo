@@ -1,21 +1,32 @@
 {
-  "name": "Algo",
-  "version": "1.0.0",
+  "name": "Algo-JavaScript Algorithm Library",
+  "version": "0.0.1",
   "description": "Algorithm Library for JavaScript and NodeJS",
   "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
-    "test": "jest --coverage"
+    "test": "jest",
+    "coverage": "npm run test -- --coverage",
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/prakashaditya13/Algo.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "computer-science",
+    "cs",
+    "algorithms",
+    "data-structures",
+    "javascript",
+    "algorithm",
+    "javascript-algorithms",
+    "sorting-algorithms",
+    "graph",
+    "tree",
+    "interview",
+    "interview-preparation"
+  ],
+  "author": "Aditya Prakash (https://www.linkedin.com/in/prakashaditya13/)",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/prakashaditya13/Algo/issues"
   },
